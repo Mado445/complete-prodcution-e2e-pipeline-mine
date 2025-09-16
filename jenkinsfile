@@ -14,18 +14,14 @@ pipeline{
                 CleanWs()
             }
         }
-    }
 
-    stages{
         stage("Checkout from SCM"){
             steps{
-                git branch: 'main', credentialsId: 'github-ref', url: 'https://github.com/dmancloud/complete-prodcution-e2e-pipeline'
+                git branch: 'main', credentialsId: 'github-ref', url: 'https://github.com/Mado445/complete-prodcution-e2e-pipeline-mine'
             }
 
         }
     }
-
-
 
 
 
