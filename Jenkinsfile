@@ -44,6 +44,17 @@ pipeline{
             }
         }
 
+        stage("quality gate sonar webhook"){
+            steps{
+                script{
+                    waitForQualityGate abortPipeline: false, credentialsId: 'jenkiins-sonarqube-token'
+
+                }
+            }
+
+
+        }
+
     }
 
 
